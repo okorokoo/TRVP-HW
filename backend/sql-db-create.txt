@@ -1,0 +1,19 @@
+
+CREATE DATABASE provider_management;
+
+USE provider_management;
+
+CREATE TABLE masters (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+    max_complexity INT NOT NULL default 10
+);
+
+CREATE TABLE applications (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    master_id INT,
+    address VARCHAR(255),
+    complexity INT,
+    FOREIGN KEY (master_id) REFERENCES masters(id)
+);
+    
