@@ -5,7 +5,6 @@ const App = () => {
   const [masters, setMasters] = useState([]);
   const [newMasterName, setNewMasterName] = useState('');
   const [newApplication, setNewApplication] = useState({ address: '', complexity: 1 });
-  // const [selectedMasterId, setSelectedMasterId] = useState(null); // Переменная для хранения выбранного мастера для перевода заявки
   const [transferState, setTransferState] = useState({ applicationId: null, fromMasterId: null });
 
   const fetchMasters = () => {
